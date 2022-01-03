@@ -1,7 +1,16 @@
 self.addEventListener('install', (e) => {
 e.waitUntil(
-caches.open('SimpleCalculator').then((cache) => cache.addAll([
-'/Calculator/'
+caches.open('Calculator').then((cache) => cache.addAll([
+'index.html',
+'Calculator.css',
+'Calculator.js',
+'DeleteDark.png',
+'DeleteLight.png',
+'Material.woff2',
+'Montserrat.ttf',
+'NoCalculationsDark.png',
+'NoCalculationsLight.png',
+'ProductSans.ttf'
 ])),
 );
 });

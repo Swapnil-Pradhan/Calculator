@@ -310,6 +310,7 @@ document.getElementById("calculation").appendChild(para);
 
 if(window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches){
 document.getElementById("delimg").src="DeleteLight.png";
+document.getElementById("theme").content="#e5fafa";
 document.getElementById("nocalcimg").src="NoCalculationsLight.png";
 }
 

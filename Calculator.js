@@ -312,3 +312,5 @@ if(window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').match
 document.getElementById("delimg").src="DeleteLight.png";
 document.getElementById("nocalcimg").src="NoCalculationsLight.png";
 }
+
+document.getElementById("v").src="Update.js?version="+Date.now();

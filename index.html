@@ -6,7 +6,6 @@
 <meta name="viewport" content="user-scalable=no">
 <title id="title"></title>
 <link rel="stylesheet" href="Calculator.css">
-<script src="Calculator.js" defer></script>
 </head>
 <body onscroll="align()">
 <form class="calculator" name="calc" autocomplete="on" onsubmit="equals(); return false;" onerror="return false;">
@@ -58,6 +57,22 @@
 <br>
 <font color="blue" onclick="clearno()">&nbsp; Cancel &nbsp;</font><font color="orangered" onclick="clearyes()">&nbsp; Delete &nbsp;</font>
 </div></div>
-<script src="History.js"></script>
+<script id="v"></script>
+<script src="Calculator.js" defer></script>
+<div>
+<div id="updatebg">
+<span>
+<h1>New update available!</h1>
+<h3 id="version">(Version: </h3>
+<h2>What's New?</h2>
+<p>
+<li id="line1"></li>
+<br>
+</p>
+<a href="Speedy.apk">&nbsp;Update&nbsp;</a>
+<i id="update" style="display:none">2</i>
+</span>
+</div>
+</div>
 </body>
 </html>

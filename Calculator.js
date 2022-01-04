@@ -180,30 +180,42 @@ document.calc.txt.value+=".";
 }
 
 function dropdown(){
-var history=document.getElementById("history");
-var dropbtn=document.getElementById("dropbtn");
-var hishead=document.getElementById("hishead");
+var history = document.getElementById("history");
+
+var dropbtn = document.getElementById("dropbtn");
+
+var hishead = document.getElementById("hishead");
+
+var Small = document.calc.small;
 if(dropbtn.style.transform=="rotate(180deg)"){
-dropbtn.style.top="30%";
+dropbtn.style.top="23%";
 document.getElementById("history").scrollTo({
 top: 0,
 behavior: 'smooth'
 })
-history.style.height="30%";
+history.style.height="28%";
 hishead.style.opacity="0";
 document.querySelector(".value").style.height="69%";
 dropbtn.style.transform="rotate(-360deg)";
 history.style.overflow="hidden";
-document.calc.small.style.opacity="1";
+Small.style.display="block";
+
+Small.style.opacity="1";
 }
 else{
-dropbtn.style.top="20%";
+dropbtn.style.top="14%";
 history.style.height="99%";
 hishead.style.opacity="1";
 document.querySelector(".value").style.height="7%";
 dropbtn.style.transform="rotate(180deg)";
 history.style.overflowY="scroll";
-document.calc.small.style.opacity="0";
+Small.style.opacity="0";
+
+setTimeout(()=>{
+
+Small.style.display="none";
+
+},500)
 }
 if(localStorage.length==0){
 document.getElementById("clear").style.display="none";

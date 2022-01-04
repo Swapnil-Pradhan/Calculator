@@ -1,6 +1,6 @@
 self.addEventListener('install', (e) => {
 e.waitUntil(
-caches.open('Calculator').then((cache) => cache.addAll([
+caches.open('SimpleCalculator').then((cache) => cache.addAll([
 'index.html',
 'Calculator.css',
 'Calculator.js',

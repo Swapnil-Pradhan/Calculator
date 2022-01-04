@@ -1,18 +1,17 @@
 <!DOCTYPE html>
 <head>
-<meta name="theme-color" content="#333333" id="theme">
 <link rel="manifest" href="Calculator.json">
 <link rel="shortcut icon" href="Calculator.png">
-<meta name="theme-color" content="#4285f4">
 <meta name="viewport" content="user-scalable=no">
 <title id="title"></title>
 <link rel="stylesheet" href="Calculator.css">
+<meta name="theme-color" content="#333333" id="theme">
 </head>
 <body onscroll="align()">
 <form class="calculator" name="calc" autocomplete="on" onsubmit="equals(); return false;" onerror="return false;">
 <div id="history">
 <input class="value" type="tel" name="txt" dir="auto" placeholder="0" required readonly>
-<h1 id="hishead"><span>History</span><span id="clear" onclick="clearall()" class="material-icons">auto_delete</span></h1>
+<h1 id="hishead"><span>History</span><span id="clear" onclick="clearall()" class="material-icons">delete_forever</span></h1>
 <div id="calculation">
 <center id="nocalc">
 <img src="NoCalculationsDark.png" alt="No Calculation" id="nocalcimg">
@@ -26,11 +25,11 @@
 <div id="keypad" onclick="small()">
 <input type="reset" value="AC">
 <div id="&pi;" onclick="pi(this.id);">&pi;</div>
-<div id="e" onclick="euler()">e</div>
-<div id="%" class="%" onclick="percent()">%</div>
-<div id="(" class="(" onclick="bracketstart()">(</div>
-<div id="^" class="**" onclick="exponent()">^</div>
-<div id=")" class=")" onclick="bracketend()">)</div>
+<div onclick="euler()">e</div>
+<div onclick="percent()">%</div>
+<div onclick="bracketstart()">(</div>
+<div onclick="exponent()">^</div>
+<div onclick="bracketend()">)</div>
 <div id="&#247;" class="/" onclick="divide(this.id)">&#247;</div>
 <div id="7" class="7" onclick="calculator(this.id);calculate(this.classList);">7</div>
 <div id="8" class="8" onclick="calculator(this.id);calculate(this.classList);">8</div>
@@ -45,7 +44,7 @@
 <div id="1" class="1" onclick="calculator(this.id);calculate(this.classList);">1</div>
 <div id="-" class="-" onclick="minus()">-</div>
 <div id="0" class="0" onclick="calculator(this.id);calculate(this.classList);">0</div>
-<div id="." class="." onclick="calculator(this.id);calculate(this.classList);">&bull;</div>
+<div onclick="point()">&bull;</div>
 <div id="dzero" class="num material-icons" onclick="backspace()">backspace</div>
 <input type="submit" value="=" id="equal" class="num">
 </div>

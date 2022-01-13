@@ -304,7 +304,7 @@ function equals(){
 var Main=document.calc.main;
 var VR=document.calc.txt;
 var Small=document.calc.small;
-var op=["*", "+", "/", "%", "-"];
+var op=["*", "+", "/", "-"];
 var history=localStorage.length;
 var para=document.createElement("p");
 if(op.indexOf((Main.value.slice(-1)))!==-1){
@@ -314,10 +314,14 @@ if((Main.value.split(")").length -1)<(Main.value.split("(").length -1)){
 var lesbrak=(Main.value.split("(").length - 1) - (Main.value.split(")").length - 1);
 var eqbrak=")".repeat(lesbrak);
 Main.value+=eqbrak;
+}
+if(Main.value.slice(-1)=="%"){
+Main.value=Main.value.substr(0, Main.value.length - 1);
+Main.value+="/100";
+}
 VR.value=eval(calc.main.value);
 Main.value=eval(calc.main.value);
 Small.value="";
-}
 localStorage.setItem(history, "<span class='hiss'>"+VR.value+"="+eval(calc.main.value)+"</span>");
 VR.value=eval(calc.main.value);
 Main.value=eval(calc.main.value);
@@ -333,4 +337,8 @@ if(window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').match
 document.getElementById("delimg").src="DeleteLight.png";
 document.getElementById("theme").content="#e5fafa";
 document.getElementById("nocalcimg").src="NoCalculationsLight.png";
+}
+
+if(matchMedia("(display-mode: standalone)").matches){
+document.querySelector("head").innerHTML+="<meta name=google content=notranslate>";
 }

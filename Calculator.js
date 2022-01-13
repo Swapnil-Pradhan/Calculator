@@ -18,16 +18,9 @@ navigator.serviceWorker.register('Cache.js');
 
 document.getElementById("v").src="Update.js?version="+Date.now();
 
-function calculator(Id){
+function calculate(Id, Class){
 document.calc.txt.value+=Id;
-}
-
-function calculator(Id){
-document.calc.txt.value+=Id;
-}
-
-function calculate(clickedClassList){
-document.calc.main.value+=clickedClassList;
+document.calc.main.value+=Class;
 }
 
 function small(){

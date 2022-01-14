@@ -312,9 +312,6 @@ if(Main.value.slice(-1)=="%"){
 Main.value=Main.value.substr(0, Main.value.length - 1);
 Main.value+="/100";
 }
-VR.value=eval(calc.main.value);
-Main.value=eval(calc.main.value);
-Small.value="";
 localStorage.setItem(history, "<span class='hiss'>"+VR.value+"="+eval(calc.main.value)+"</span>");
 VR.value=eval(calc.main.value);
 Main.value=eval(calc.main.value);

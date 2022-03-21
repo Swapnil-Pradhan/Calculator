@@ -296,6 +296,8 @@ font-family: Montserrat;
 margin: 3%;
 z-index: 9;
 position: absolute;
+display: flex;
+flex-direction: column-reverse;
 }
 
 #calculation p{
